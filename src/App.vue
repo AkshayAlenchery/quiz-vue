@@ -4,21 +4,24 @@
     <QuestionBox
       :currentQuestion="questions[index]"
       :next="next"
-      v-if="questions.length"
+      v-if="questions.length && numTotal !== 4"
       :increment="increment"
     />
+    <ResultBox :numCorrect="numCorrect" :numTotal="numTotal" v-if="numTotal === 4"></ResultBox>
   </div>
 </template>
 
 <script>
 import Header from './components/Header.vue'
 import QuestionBox from './components/QuestionBox.vue'
+import ResultBox from './components/ResultBox.vue'
 
 export default {
   name: 'app',
   components: {
     Header,
-    QuestionBox
+    QuestionBox,
+    ResultBox
   },
   data() {
     return {

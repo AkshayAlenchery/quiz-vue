@@ -9,6 +9,9 @@
 
 <script>
 export default {
-  props: ['numCorrect', 'numTotal']
+  props: {
+    numCorrect: Number,
+    numTotal: Number
+  }
 }
 </script>

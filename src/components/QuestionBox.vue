@@ -68,7 +68,7 @@ export default {
     },
     submitAnswer: function() {
       let isCorrect = false
-      if (this.selectedIndex == this.correctIndex) {
+      if (this.selectedIndex === this.correctIndex) {
         isCorrect = true
       }
       this.increment(isCorrect)
